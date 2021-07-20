@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core"
-import {PostsService} from '../posts.service'
+import { PostsService } from '../posts.service'
+import {IPost} from '../post'
 
 
 @Component({
@@ -11,8 +12,8 @@ import {PostsService} from '../posts.service'
 
 export class PostListComponent implements OnInit {
 
-  public posts = [];
-
+ public posts: IPost[] = []
+  
   constructor(private service: PostsService) { }
 
   ngOnInit() {
